@@ -13,7 +13,7 @@ import Footer from "../Pages/Footer";
 
 const Signup1 = () => {
   return (
-    <Box mt={"30px"} h={"100vh"}>
+    <Box mt="30px" minH="100vh" overflowY="auto" mb={{base:"300px" ,md:"50px"}}>
       <Flex
         w={{ base: "360px", md: "90%" }}
         h={{ base: "550px", md: "550px" }}
