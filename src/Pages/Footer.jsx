@@ -106,7 +106,6 @@ const Footer = () => {
             <Text>Corporate Information</Text>
           </Box>
         </Flex>
-
         <Flex
           display={{ base: "flex", md: "none" }}
           textAlign={"start"}
@@ -127,7 +126,6 @@ const Footer = () => {
             <Text m="5px">Cookie Preferences</Text>
           </Box>
         </Flex>
-
         <Flex w={{ base: "90%", md: "70%" }}>
           <Text textAlign={"start"} fontSize="sm">
             © Alkye Test.
