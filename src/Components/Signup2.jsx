@@ -1,20 +1,10 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Input,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
 import logo1 from "./assets/Logo1.png";
-import eys from "./assets/eye-off.png"
-
+import eys from "./assets/eye-off.png";
 import Footer from "../Pages/Footer";
 
 const Signup2 = () => {
-
   const [showPassword, setShowPassword] = useState(false);
 
   const showsPassword = () => {
@@ -30,8 +20,7 @@ const Signup2 = () => {
     >
       <Flex
         w={{ base: "360px", md: "90%" }}
-        h={{ base: "550px", md: "550px" }}
-        // mt={{ base: "41px", md: "30px" }}
+        h={{ base: "750px", md: "550px" }}
         m="auto"
         boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
         flexDirection="column"
@@ -44,10 +33,8 @@ const Signup2 = () => {
           mb={{ base: "20px", md: "20px" }}
           marginLeft={{ base: "5rem", md: "10%" }}
         >
-          {/* Adjusted Box for better alignment */}
           <Image src={logo1} boxSize="100px" objectFit="contain" />
         </Box>
-
         <Box>
           <Text
             fontSize={{ base: "12px", md: "24px" }}
@@ -57,7 +44,6 @@ const Signup2 = () => {
             Steps 2
           </Text>
         </Box>
-
         <Flex
           w="70%"
           flexDirection={["column", "row"]}
@@ -77,38 +63,40 @@ const Signup2 = () => {
               Create an account to <Text> continue</Text>
             </Text>
           </Box>
-          <Box display={{ base: "none", md: "flex" }}
-           w="1500px" mt={"-50px"}  ml="15%" fontWeight={"bold"} 
-           >
+          <Box
+            display={{ base: "none", md: "flex" }}
+            w="1500px"
+            mt={"-50px"}
+            ml="15%"
+            fontWeight={"bold"}
+          >
             {" "}
             <Text fontSize={{ base: "0", md: "14px" }}>
               Enter a password to create your account with 
             </Text>{" "}
           </Box>
-          
           <Input
-              type={showPassword ? "text" : "password"}
-              placeholder="Choose a Password"
-              height="60px"
-              border="1px solid gray"
-              ml="-820px"
-              mt="50px"
-              pr="40px" 
-              display={{ base: "none", md: "flex" }}
-            />
-            <Image
-             src={eys}
-             position="absolute"
-             right="350px"
-             top="35.5%"
-             transform="translateY(-50%)"
-             cursor="pointer"
-             onClick={showsPassword}
-             boxSize="20px"
-             display={{ base: "none", md: "flex" }}
-            />
+            type={showPassword ? "text" : "password"}
+            placeholder="Choose a Password"
+            height="60px"
+            border="1px solid gray"
+            ml="-820px"
+            mt="50px"
+            pr="40px"
+            display={{ base: "none", md: "flex" }}
+          />
+          <Image
+            src={eys}
+            position="absolute"
+            right="350px"
+            top="35.5%"
+            transform="translateY(-50%)"
+            cursor="pointer"
+            onClick={showsPassword}
+            boxSize="20px"
+            display={{ base: "none", md: "flex" }}
+          />
         </Flex>
-
         <Flex
           w="90%"
           flexDirection={["column", "row"]}
@@ -137,7 +125,6 @@ const Signup2 = () => {
             marginTop={{ base: "0rem", md: "-1rem" }}
             display={{ base: "none", md: "flex" }}
           >
-            
             <Button
               bgColor="black"
               color="white"
@@ -150,22 +137,39 @@ const Signup2 = () => {
             </Button>
           </Box>
         </Flex>
-
         <Box w="80%" marginLeft={"-130px"} mt="40px">
-          <Text textAlign={"start"} fontSize={"13px"}   display={{ base: "none", md: "flex" }}>
-          Dingoo will use your data to personalise and improve your Dingoo experience and to send you information about Dingoo. You can change your communication preferences anytime. We may use your data as described in our Privacy Policy, including sharing it with The Test of Companies. By clicking "Agree & Continue", you agree to our Subscriber Agreement and acknowledge that you have read our Privacy Policy and Collection Statement.
+          <Text
+            textAlign={"start"}
+            fontSize={"13px"}
+            display={{ base: "none", md: "flex" }}
+          >
+            Dingoo will use your data to personalise and improve your Dingoo
+            experience and to send you information about Dingoo. You can change
+            your communication preferences anytime. We may use your data as
+            described in our Privacy Policy, including sharing it with The Test
+            of Companies. By clicking "Agree & Continue", you agree to
+            our Subscriber Agreement and acknowledge that you have read
+            our Privacy Policy and Collection Statement.
           </Text>
-       </Box>
+        </Box>
+        <Box>
+          <Text
+            fontSize={{ base: "14px", md: "14px" }}
+            display={{ base: "flex", md: "none" }}
+          >
+            Enter a password to create your account with 
+          </Text>{" "}
+        </Box>
         <Box display={{ base: "flex", md: "none" }}>
           <Box
             display={{ base: "flex", md: "none" }}
             justifyContent={["center", "flex-start"]}
-            marginTop={"50px"}
+            marginTop={"20px"}
           >
             <Input
               display={{ base: "flex", md: "none" }}
               type="password"
-              placeholder="Password"
+              placeholder="Choose a  Password"
               htmlSize={30}
               height="50px"
               border={"1px solid gray"}
@@ -176,12 +180,17 @@ const Signup2 = () => {
           display={{ base: "flex", md: "none" }}
           justifyContent="center"
           alignItems="center"
-          gap="4rem"
+          gap="2rem"
           mt={"30px"}
+          w="80%"
         >
           <Box>
-            <Text>Have an account?</Text>
+            <Text fontSize="10px" textAlign={"start"}>
+              Use a minimum of 6 characters (case sensitive) with at least one
+              number or special character.
+            </Text>
           </Box>
+
           <Box>
             <Button
               bgColor="black"
@@ -190,12 +199,23 @@ const Signup2 = () => {
               height="40px"
               width="100px"
             >
-              Agree & Continue
+              Continue
             </Button>
           </Box>
         </Flex>
+        <Box w="80%" display={{ base: "flex", md: "none" }} mt="20px">
+          <Text textAlign={"start"} fontSize={"8px"}>
+            Dingoo will use your data to personalise and improve your Dingoo
+            experience and to send you information about Dingoo. You can change
+            your communication preferences anytime. We may use your data as
+            described in our Privacy Policy, including sharing it with The Test
+            of Companies. By clicking "Agree & Continue", you agree to
+            our Subscriber Agreement and acknowledge that you have read
+            our Privacy Policy and Collection Statement.
+          </Text>
+        </Box>
       </Flex>
-      {/* <Footer/> */}
+      <Footer />
     </Box>
   );
 };
