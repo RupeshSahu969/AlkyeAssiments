@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
-import logo1 from "./assets/Logo1.png";
-import eys from "./assets/eye-off.png";
-import Footer from "../Pages/Footer";
+import logo1 from "../assets/Logo1.png";
+import eys from "../assets/eye-off.png";
+import Footer from "../../Pages/Footer";
 
 const Signup2 = () => {
   const [showPassword, setShowPassword] = useState(false);
