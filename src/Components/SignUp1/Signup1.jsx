@@ -8,8 +8,8 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import logo1 from "./assets/Logo1.png";
-import Footer from "../Pages/Footer";
+import logo1 from "../assets/Logo1.png";
+import Footer from "../../Pages/Footer";
 
 const Signup1 = () => {
   return (
