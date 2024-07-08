@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -10,8 +10,20 @@ import {
 } from "@chakra-ui/react";
 import logo1 from "../assets/Logo1.png";
 import Footer from "../../Pages/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Signup1 = () => {
+  const [username, setUserName] = useState("");
+  const navigate = useNavigate();
+
+  const handleContinue = () => {
+    if (username === "testadmin") {
+      navigate("/signup2", { state: { username } });
+    } else {
+      alert("Please enter a valid username.");
+    }
+  };
+
   return (
     <Box mt="30px" minH="100vh" overflowY="auto" mb={{base:"300px" ,md:"50px"}}>
       <Flex
@@ -76,6 +88,7 @@ const Signup1 = () => {
               htmlSize={60}
               height="60px"
               border={"1px solid gray"}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </Box>
         </Flex>
@@ -106,6 +119,7 @@ const Signup1 = () => {
               height="40px"
               width="100px"
               marginLeft={{ base: "0rem", md: "-14.6rem" }}
+              onClick={handleContinue}
             >
               Continue
             </Button>
@@ -119,11 +133,12 @@ const Signup1 = () => {
           >
             <Input
               display={{ base: "flex", md: "none" }}
-              type="email"
+              type="text"
               placeholder="Email"
               htmlSize={30}
               height="50px"
               border={"1px solid gray"}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </Box>
         </Box>
@@ -144,6 +159,7 @@ const Signup1 = () => {
               size="md"
               height="40px"
               width="100px"
+              onClick={handleContinue}
             >
               Continue
             </Button>
