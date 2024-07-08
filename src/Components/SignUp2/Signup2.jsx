@@ -3,14 +3,47 @@ import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
 import logo1 from "../assets/Logo1.png";
 import eys from "../assets/eye-off.png";
 import Footer from "../../Pages/Footer";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Signup2 = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const username = location.state?.username || "";
 
-  const showsPassword = () => {
-    setShowPassword(!showPassword);
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
   };
 
+  const handleLogin = async () => {
+    if (password) {
+      try {
+        const response = await fetch("https://untitled-twkmuar27a-uc.a.run.app/api/login/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: username,
+            password: password,
+          }),
+        });
+
+        if (response.ok) {
+          navigate("/dashboard");
+        } else {
+          alert("Login failed. Please check your credentials.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please try again.");
+      }
+    } else {
+      alert("Please enter your password.");
+    }
+  };
+
+  
   return (
     <Box
       mt="30px"
@@ -76,26 +109,27 @@ const Signup2 = () => {
             </Text>{" "}
           </Box>
           <Input
-            type={showPassword ? "text" : "password"}
-            placeholder="Choose a Password"
-            height="60px"
-            border="1px solid gray"
-            ml="-820px"
-            mt="50px"
-            pr="40px"
-            display={{ base: "none", md: "flex" }}
-          />
-          <Image
-            src={eys}
-            position="absolute"
-            right="350px"
-            top="35.5%"
-            transform="translateY(-50%)"
-            cursor="pointer"
-            onClick={showsPassword}
-            boxSize="20px"
-            display={{ base: "none", md: "flex" }}
-          />
+        type={showPassword ? "text" : "password"}
+        placeholder="Choose a Password"
+        height="60px"
+        border="1px solid gray"
+        ml="-820px"
+        mt="50px"
+        pr="40px"
+        onChange={(e) => setPassword(e.target.value)}
+        display={{ base: "none", md: "flex" }}
+      />
+      <Image
+        src={eys}
+        position="absolute"
+        right="350px"
+        top="28%"
+        transform="translateY(-50%)"
+        cursor="pointer"
+        onClick={togglePasswordVisibility} // Use togglePasswordVisibility here
+        boxSize="20px"
+        // Add any other necessary props
+      />
         </Flex>
         <Flex
           w="90%"
@@ -131,6 +165,7 @@ const Signup2 = () => {
               size="sm"
               height="40px"
               width="140px"
+              onClick={handleLogin}
               marginLeft={{ base: "0rem", md: "-17rem" }}
             >
               Agree & Continue
@@ -172,6 +207,7 @@ const Signup2 = () => {
               placeholder="Choose a  Password"
               htmlSize={30}
               height="50px"
+              onChange={(e) => setPassword(e.target.value)}
               border={"1px solid gray"}
             />
           </Box>
@@ -198,6 +234,7 @@ const Signup2 = () => {
               size="md"
               height="40px"
               width="100px"
+              onClick={handleLogin}
             >
               Continue
             </Button>

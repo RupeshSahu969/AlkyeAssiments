@@ -133,13 +133,13 @@ const Dashboard = () => {
             // border={"1px solid red"}
           >
             <Box>
-              <Image src={elipse1} boxSize="30px" objectFit="contain" />
+              <Image src={elipse1} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize="30px" objectFit="contain" />
+              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize="30px" objectFit="contain" />
+              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
             </Box>
           </Flex>
         </Box>
@@ -195,21 +195,19 @@ const Dashboard = () => {
             w={{ base: "80%", md: "10%" }}
             gap={1}
             mt={{ base: "2rem", md: "2rem" }}
-            ml={{ base: "10rem", md: "90%" }}
-
+            ml={{ base: "1rem", md: "90%" }}
             display="flex"
             justifyContent="center"
             alignItems="center"
-            // border={"1px solid red"}
           >
             <Box>
-              <Image src={elipse1} boxSize="30px" objectFit="contain" />
+              <Image src={elipse1} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize="30px" objectFit="contain" />
+              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize="30px" objectFit="contain" />
+              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
             </Box>
           </Flex>
         </Box>
