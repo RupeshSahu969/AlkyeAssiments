@@ -44,7 +44,7 @@ const Signup1 = () => {
           <Text
             fontSize={{ base: "12px", md: "24px" }}
             textAlign={"start"}
-            ml={{ base: "-8.9rem", md: "-37.9rem" }}
+            ml={{ base: "-8.9rem", md: "-37.2rem" }}
           >
             Steps 1
           </Text>
