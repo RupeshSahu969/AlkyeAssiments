@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 import elipse1 from "../assets/Ellipse 5.png";
 import elipse2 from "../assets/Ellipse 6.png";
@@ -35,7 +29,6 @@ const Dashboard = () => {
 
   return (
     <Box
-      
       minH="100vh"
       overflowY="auto"
       mb={{ base: "300px", md: "10px" }}
@@ -81,13 +74,13 @@ const Dashboard = () => {
           mt={{ base: "5rem", md: "1rem" }}
           h={{ base: "230px", md: "500px" }}
           ml={{ base: "4rem", md: "2rem" }}
-          mb={{base:"0rem",md:"15rem"}}
+          mb={{ base: "0rem", md: "15rem" }}
         >
           <Box
             fontSize={{ base: "24px", md: "48px" }}
             mb="20px"
             textAlign={{ base: "center", md: "left" }}
-            display={{base:"none",md:"flex"}}
+            display={{ base: "none", md: "flex" }}
           >
             <Text>Photography</Text>
           </Box>
@@ -126,20 +119,31 @@ const Dashboard = () => {
             w={{ base: "80%", md: "10%" }}
             gap={1}
             mt={{ base: "2rem", md: "2rem" }}
-            ml={{ base: "10rem", md: "90%" }}
+            ml={{ base: "10.5rem", md: "90%" }}
             display="flex"
             justifyContent="center"
             alignItems="center"
-            // border={"1px solid red"}
           >
             <Box>
-              <Image src={elipse1} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
+              <Image
+                src={elipse1}
+                boxSize={{ base: "15px", md: "30px" }}
+                objectFit="contain"
+              />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
+              <Image
+                src={elipse2}
+                boxSize={{ base: "15px", md: "30px" }}
+                objectFit="contain"
+              />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
+              <Image
+                src={elipse2}
+                boxSize={{ base: "15px", md: "30px" }}
+                objectFit="contain"
+              />
             </Box>
           </Flex>
         </Box>
@@ -150,13 +154,13 @@ const Dashboard = () => {
           mt={{ base: "5rem", md: "1rem" }}
           h={{ base: "230px", md: "500px" }}
           ml={{ base: "3rem", md: "3rem" }}
-          mb={{base:"0rem",md:"15rem"}}
+          mb={{ base: "0rem", md: "15rem" }}
         >
           <Box
             fontSize={{ base: "24px", md: "48px" }}
             mb="20px"
             textAlign={{ base: "center", md: "left" }}
-            display={{base:"none",md:"flex"}}
+            display={{ base: "none", md: "flex" }}
           >
             <Text>Learning</Text>
           </Box>
@@ -195,24 +199,36 @@ const Dashboard = () => {
             w={{ base: "80%", md: "10%" }}
             gap={1}
             mt={{ base: "2rem", md: "2rem" }}
-            ml={{ base: "1rem", md: "90%" }}
+            ml={{ base: "11rem", md: "90%" }}
             display="flex"
             justifyContent="center"
             alignItems="center"
           >
             <Box>
-              <Image src={elipse1} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
+              <Image
+                src={elipse1}
+                boxSize={{ base: "15px", md: "30px" }}
+                objectFit="contain"
+              />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
+              <Image
+                src={elipse2}
+                boxSize={{ base: "15px", md: "30px" }}
+                objectFit="contain"
+              />
             </Box>
             <Box>
-              <Image src={elipse2} boxSize={{base:"15px",md:"30px"}} objectFit="contain" />
+              <Image
+                src={elipse2}
+                boxSize={{ base: "15px", md: "30px" }}
+                objectFit="contain"
+              />
             </Box>
           </Flex>
         </Box>
       </Flex>
-      <Footer/>
+      <Footer />
     </Box>
   );
 };

@@ -62,7 +62,6 @@ const Footer = () => {
             />
           </Box>
         </Flex>
-
         <Flex
           gap={"10"}
           m="auto"
@@ -83,7 +82,6 @@ const Footer = () => {
             <Text>Corporate Information</Text>
           </Box>
         </Flex>
-
         <Flex
           gap={"10"}
           m="auto"
