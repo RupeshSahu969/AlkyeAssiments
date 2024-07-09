@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Input,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
 import logo1 from "../assets/Logo1.png";
 import Footer from "../../Pages/Footer";
 import { useNavigate } from "react-router-dom";
@@ -20,32 +12,34 @@ const Signup1 = () => {
     if (username === "testadmin") {
       navigate("/signup2", { state: { username } });
     } else {
-      alert("Please enter a valid username.");
+      alert("Please enter a valid Email.");
     }
   };
 
   return (
-    <Box mt="30px" minH="100vh" overflowY="auto" mb={{base:"300px" ,md:"50px"}}>
+    <Box
+      mt="30px"
+      minH="100vh"
+      overflowY="auto"
+      mb={{ base: "300px", md: "50px" }}
+    >
       <Flex
         w={{ base: "360px", md: "90%" }}
         h={{ base: "550px", md: "550px" }}
-        // mt={{ base: "41px", md: "30px" }}
         m="auto"
         boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
         flexDirection="column"
         alignItems="center"
         p={{ base: "0rem", md: "20px" }}
-        borderRadius={{base:"50px", md:"10px"}}
+        borderRadius={{ base: "50px", md: "10px" }}
       >
         <Box
           w={{ base: "100%", md: "100%" }}
           mb={{ base: "20px", md: "20px" }}
           marginLeft={{ base: "5rem", md: "10%" }}
         >
-          {/* Adjusted Box for better alignment */}
           <Image src={logo1} boxSize="100px" objectFit="contain" />
         </Box>
-
         <Box>
           <Text
             fontSize={{ base: "12px", md: "24px" }}
@@ -55,7 +49,6 @@ const Signup1 = () => {
             Steps 1
           </Text>
         </Box>
-
         <Flex
           w="70%"
           flexDirection={["column", "row"]}
@@ -92,7 +85,6 @@ const Signup1 = () => {
             />
           </Box>
         </Flex>
-
         <Flex
           w="90%"
           flexDirection={["column", "row"]}
@@ -166,7 +158,7 @@ const Signup1 = () => {
           </Box>
         </Flex>
       </Flex>
-      <Footer/>
+      <Footer />
     </Box>
   );
 };
